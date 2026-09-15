@@ -6,6 +6,10 @@ Implementation of "Figures as Interfaces: Toward LLM-Native Artifacts for Scient
 
 Core idea to implement: an LLM-native figure is a data-driven artifact that is human-legible and machine-addressable. Each figure embeds its full provenance (data subset, analytical operations and code, visualization spec) so an agent can trace a selection back to source rows, generate code to extend the analysis, and produce new figures from natural-language instructions or direct manipulation, via a bidirectional mapping between figure marks and underlying data.
 
+## Authors' permission
+
+Vishal asked the paper's authors for permission on LinkedIn on 2026-09-15; reply pending. Until it arrives, the repo stays an attributed CC BY-NC-SA 4.0 implementation and no announcement to students goes out. Record the reply here when it comes.
+
 ## Lane
 
 Built on Codex (gpt-6-astra, reasoning effort low) in this workspace to conserve Claude quota (Vishal, 2026-09-15). Control holds merges and reviews. Tests required for logic; TDD red first.
