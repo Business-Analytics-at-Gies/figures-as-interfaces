@@ -1,3 +1,6 @@
 
 # paper sources stay local
 sources/
+
+# local scratch (pytest basetemp, TMPDIR)
+.scratch/
