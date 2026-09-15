@@ -73,23 +73,52 @@ class Artifact:
         if not self.dataset_hash:
             self.dataset_hash = digest(self.dataset)
 
+    def _inline_dataset_sample(self, limit: int = 200) -> list[dict]:
+        """Bounded rows referenced by marks, preferring the evening brush hours."""
+        by_id = {row["row_id"]: row for row in self.dataset}
+        selected: list[dict] = []
+        seen: set[str] = set()
+
+        def take(row_id: str) -> None:
+            if row_id in seen or row_id not in by_id or len(selected) >= limit:
+                return
+            seen.add(row_id)
+            selected.append(copy.deepcopy(by_id[row_id]))
+
+        for figure in self.figures.values():
+            if figure.M.get("operation") != "generation":
+                continue
+            for point in sorted(
+                figure.V.get("spec", {}).get("data", {}).get("values", []),
+                key=lambda item: (item.get("pickup_hour") is None, item.get("pickup_hour"), item.get("mark_id")),
+            ):
+                if point.get("pickup_hour") in (17, 18, 19, 20):
+                    ids = figure.R.mark_to_rows.get(point["mark_id"], [])
+                    if ids:
+                        take(sorted(ids)[0])
+            break
+        for figure in self.figures.values():
+            for mark_id in sorted(figure.R.mark_to_rows):
+                for row_id in sorted(figure.R.mark_to_rows[mark_id]):
+                    take(row_id)
+                    if len(selected) >= limit:
+                        return selected
+        if not selected:
+            return copy.deepcopy(self.dataset[:limit])
+        return selected
+
     def to_dict(self) -> dict:
         """Portable JSON representation with bounded inlined rows and PNG paths.
 
-        The full dataset and all per-figure source rows remain available in
-        memory (self.dataset and each Figure.D["rows"]). Only a bounded sample
-        is inlined into the JSON envelope to keep artifacts small.
+        The full dataset remains available in memory for replay. dataset_path
+        points at the Parquet sample (or a JSON sidecar for tiny fixtures).
+        The inlined dataset field holds only a bounded mark-referenced sample
+        so JSON-only consumers can resolve a brush without the full file.
         """
         data = asdict(self)
-
-        # Limit top-level dataset sample; full rows live in the sidecar pointed
-        # to by dataset_path and are loaded by Artifact.load for replay.
         sample_limit = 200
-        if len(data["dataset"]) > sample_limit:
-            data["dataset"] = data["dataset"][:sample_limit]
+        data["dataset"] = self._inline_dataset_sample(sample_limit)
 
-        # Limit per-figure source rows and drop inline PNG bytes; the PNG
-        # itself is written as a sidecar file and referenced via V["png_path"].
         for figure in data["figures"].values():
             rows = figure["D"]["rows"]
             if len(rows) > sample_limit:
@@ -142,13 +171,18 @@ class Artifact:
         self.validate()
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
-        # Persist the full dataset to a sidecar JSON file referenced by
-        # dataset_path. This file carries the complete rows; the artifact JSON
-        # only holds a small sample for inspection.
-        sidecar = path.parent / self.dataset_path
-        temporary_data = sidecar.with_name(sidecar.name + ".tmp")
-        temporary_data.write_text(json.dumps(self.dataset, indent=2, sort_keys=True, allow_nan=False) + "\n")
-        temporary_data.replace(sidecar)
+        target = path.parent / self.dataset_path
+        if target.suffix.lower() == ".parquet":
+            if not target.resolve().is_file():
+                raise ValueError("dataset_path Parquet file is missing")
+        else:
+            # Tiny fixtures still persist a JSON snapshot next to the artifact.
+            target.parent.mkdir(parents=True, exist_ok=True)
+            temporary_data = target.with_name(target.name + ".tmp")
+            temporary_data.write_text(
+                json.dumps(self.dataset, indent=2, sort_keys=True, allow_nan=False) + "\n"
+            )
+            temporary_data.replace(target)
         temporary = path.with_name(path.name + ".tmp")
         temporary.write_text(json.dumps(self.to_dict(), indent=2, sort_keys=True, allow_nan=False) + "\n")
         temporary.replace(path)
@@ -156,15 +190,19 @@ class Artifact:
     @classmethod
     def load(cls, path: str | Path) -> Artifact:
         try:
+            from .dataset import load_snapshot
+
             path = Path(path)
             value = json.loads(path.read_text())
             if not value.get("dataset_hash"):
                 raise ValueError("Missing dataset checksum")
-            # Load the full dataset from the referenced sidecar; the inlined
-            # dataset sample, if present, is for inspection only.
+            # Full rows come from dataset_path (Parquet sample or JSON fixture).
+            # The inlined dataset array is a bounded mark-referenced sample only.
             sidecar_name = value.get("dataset_path", "dataset.json")
             try:
-                full_dataset = json.loads((path.parent / sidecar_name).read_text())
+                full_dataset = load_snapshot(path.parent / sidecar_name)
+            except ValueError:
+                raise
             except OSError as error:
                 raise ValueError("Missing or unreadable dataset sidecar") from error
             value["dataset"] = full_dataset

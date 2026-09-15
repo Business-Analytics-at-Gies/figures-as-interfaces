@@ -8,9 +8,9 @@ Audience: BADM 554 and BDI 513 students using Wolfram notebooks or Python/Colab.
 | --- | --- |
 | `format_version` | Integer `1`. Consumers must reject unsupported versions. |
 | `artifact_id` | String identifying this exploration. |
-| `dataset` | Bounded sample (at most 200 rows) of the normalized input as JSON row objects, suitable for quick inspection. |
-| `dataset_hash` | SHA-256 of Python's sorted-key JSON serialization of the full input rows stored in the sidecar file, used for reference replay integrity. Other consumers can use the rows directly; this hash is not a signature. |
-| `dataset_path` | Relative path to the JSON sidecar file containing the full normalized input rows. |
+| `dataset` | Bounded sample (at most 200 rows) of mark-referenced normalized input rows for JSON-only selection and inspection. |
+| `dataset_hash` | SHA-256 of Python's sorted-key JSON serialization of the full normalized input rows loaded from `dataset_path`, used for reference replay integrity. Other consumers can use the rows directly; this hash is not a signature. |
+| `dataset_path` | Relative path to the full analytical snapshot used for SQL replay. The committed example points at the Parquet sample (`../data/yellow_tripdata_sample.parquet`). Tiny fixtures may use a JSON sidecar instead. |
 | `source` | Data origin, file hashes, DuckDB preparation SQL and parameters, sample manifest and input schema. |
 | `figures` | Dictionary keyed by immutable figure-version ids such as `f0001`. |
 | `versions` | Dictionary keyed by artifact-version ids such as `a0001`. Each node has `parents`, `figures`, `links`, `input`, and a UTC `timestamp`. |
@@ -49,7 +49,7 @@ Language-independent algorithm:
 1. Parse the JSON and choose `figures[versions[head].figures[logical_chart_id]]`.
 2. Render its `V.spec`. Resolve a brush to the selected inline data's `mark_id` values.
 3. Look up each id in `R.mark_to_rows`; reject missing ids and an empty selection.
-4. Union the returned row ids. Load the full dataset from `dataset_path`, index it by `row_id`, and retrieve the corresponding rows. `D.rows` is a small, inlined sample, not the complete selection.
+4. Union the returned row ids. Resolve rows from the inlined `dataset` sample for a portable JSON-only brush (the sample is mark-referenced and bounded). For the complete selection, execute `C.sql` against the snapshot at `dataset_path`, or join `row_id` values to that snapshot. `D.rows` is likewise a small sample, not the complete selection.
 5. To update linked zone charts, find the state's `links` with this logical chart as `source`. Derive distinct pickup hours and boroughs from selected rows; replace those filters in each `action_template` and execute the new action sequence. Preserve January scope and the original borough. Create a new artifact version, retaining prior states.
 
 Python example using only the standard library, equally expressible with Wolfram associations:
@@ -63,16 +63,14 @@ figure = artifact['figures'][state['figures']['chart0001']]
 marks = [d['mark_id'] for d in figure['V']['spec']['data']['values']
          if 17 <= d['pickup_hour'] <= 20]
 ids = {row_id for mark in marks for row_id in figure['R']['mark_to_rows'][mark]}
-with open(artifact['dataset_path']) as stream:
-    full_rows = json.load(stream)
-rows = [row for row in full_rows if row['row_id'] in ids]
+rows = [row for row in artifact['dataset'] if row['row_id'] in ids]
 ```
 
 The renderer must return selected datum ids, not screenshot coordinates. An interval 17 through 20 selects four hourly marks, across all January dates. This implementation does not ship a browser brush adapter or a Wolfram loader.
 
 ## SQL replay and coordination
 
-Load the full dataset from `dataset_path` into a DuckDB table named `trips` using `source.schema` (or `D.schema` for supplied fixtures). In a fresh connection, execute the chosen figure's `C.sql`. The last statement returns `D.results`; `SELECT * FROM selected ORDER BY row_id` returns the complete figure rows. To recover lineage independently, group the `selected` table by `pickup_hour` or `pickup_zone_id` and collect `row_id` in sorted order. No Python package is necessary for these operations.
+Load the full snapshot from `dataset_path` into a DuckDB table named `trips` using `source.schema` (or `D.schema` for supplied fixtures). When `dataset_path` ends in `.parquet`, normalize with the same preparation SQL recorded in `source`. In a fresh connection, execute the chosen figure's `C.sql`. The last statement returns `D.results`; `SELECT * FROM selected ORDER BY row_id` returns the complete figure rows. To recover lineage independently, group the `selected` table by `pickup_hour` or `pickup_zone_id` and collect `row_id` in sorted order. No Python package is necessary for these operations when the snapshot is already JSON; Parquet consumers need a DuckDB or compatible reader.
 
 A coordination link contains `source`, `target` (logical chart ids), `dimensions` (`pickup_hour`, `pickup_borough`) and `action_template`. The template is a language-neutral list, not executable Python. Each version records the input instruction or brush ids and source figure version. Coordination reuses this template without another planner call. Only direct links are supported in this slice.
 

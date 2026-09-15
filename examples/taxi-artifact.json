@@ -3,187 +3,35 @@
   "dataset": [
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side North",
-      "pickup_zone_id": 238,
-      "row_id": "27"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "63"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "134"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Murray Hill",
-      "pickup_zone_id": 170,
-      "row_id": "138"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
+      "pickup_date": "2024-01-12",
+      "pickup_hour": 17,
       "pickup_zone": "Yorkville West",
       "pickup_zone_id": 263,
-      "row_id": "168"
+      "row_id": "1000040"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "180"
+      "pickup_date": "2024-01-12",
+      "pickup_hour": 18,
+      "pickup_zone": "Lincoln Square East",
+      "pickup_zone_id": 142,
+      "row_id": "1003094"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "195"
+      "pickup_date": "2024-01-12",
+      "pickup_hour": 19,
+      "pickup_zone": "Midtown East",
+      "pickup_zone_id": 162,
+      "row_id": "1009960"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village North",
-      "pickup_zone_id": 113,
-      "row_id": "236"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side North",
-      "pickup_zone_id": 236,
-      "row_id": "245"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "252"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "339"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Lower East Side",
-      "pickup_zone_id": 148,
-      "row_id": "348"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "363"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Morningside Heights",
-      "pickup_zone_id": 166,
-      "row_id": "381"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "TriBeCa/Civic Center",
-      "pickup_zone_id": 231,
-      "row_id": "433"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "461"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Meatpacking/West Village West",
-      "pickup_zone_id": 158,
-      "row_id": "550"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village North",
-      "pickup_zone_id": 113,
-      "row_id": "610"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "833"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "841"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown South",
-      "pickup_zone_id": 164,
-      "row_id": "890"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side North",
-      "pickup_zone_id": 238,
-      "row_id": "899"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "SoHo",
-      "pickup_zone_id": 211,
-      "row_id": "933"
+      "pickup_date": "2024-01-12",
+      "pickup_hour": 20,
+      "pickup_zone": "Lincoln Square West",
+      "pickup_zone_id": 143,
+      "row_id": "1016638"
     },
     {
       "pickup_borough": "Manhattan",
@@ -203,11 +51,1115 @@
     },
     {
       "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Washington Heights South",
+      "pickup_zone_id": 244,
+      "row_id": "1039123"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Flatiron",
+      "pickup_zone_id": 90,
+      "row_id": "1039183"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "TriBeCa/Civic Center",
+      "pickup_zone_id": 231,
+      "row_id": "1039256"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1039300"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1039411"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Kips Bay",
+      "pickup_zone_id": 137,
+      "row_id": "1039414"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1039641"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1039675"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1039726"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1039756"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side South",
+      "pickup_zone_id": 237,
+      "row_id": "1039893"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Little Italy/NoLiTa",
+      "pickup_zone_id": 144,
+      "row_id": "1039937"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1039950"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1040011"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "SoHo",
+      "pickup_zone_id": 211,
+      "row_id": "1040055"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown North",
+      "pickup_zone_id": 163,
+      "row_id": "1040089"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Little Italy/NoLiTa",
+      "pickup_zone_id": 144,
+      "row_id": "1040230"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1040323"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1040529"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village North",
+      "pickup_zone_id": 113,
+      "row_id": "1040588"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Gramercy",
+      "pickup_zone_id": 107,
+      "row_id": "1040811"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1040817"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Murray Hill",
+      "pickup_zone_id": 170,
+      "row_id": "1040831"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1040833"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1040842"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Gramercy",
+      "pickup_zone_id": 107,
+      "row_id": "1040910"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown East",
+      "pickup_zone_id": 162,
+      "row_id": "1041035"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1041129"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Hudson Sq",
+      "pickup_zone_id": 125,
+      "row_id": "1041291"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1041334"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "TriBeCa/Civic Center",
+      "pickup_zone_id": 231,
+      "row_id": "1041344"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1041347"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1041460"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "SoHo",
+      "pickup_zone_id": 211,
+      "row_id": "1041469"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1041531"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lincoln Square East",
+      "pickup_zone_id": 142,
+      "row_id": "1041564"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1041570"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1041588"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1041682"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1041690"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1041757"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Flatiron",
+      "pickup_zone_id": 90,
+      "row_id": "1041917"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1041963"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lincoln Square East",
+      "pickup_zone_id": 142,
+      "row_id": "1042028"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1042151"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1042179"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1042351"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1042352"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1042380"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1042568"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1042569"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Flatiron",
+      "pickup_zone_id": 90,
+      "row_id": "1042596"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown North",
+      "pickup_zone_id": 163,
+      "row_id": "1042644"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Murray Hill",
+      "pickup_zone_id": 170,
+      "row_id": "1042698"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1042838"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1042935"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "UN/Turtle Bay South",
+      "pickup_zone_id": 233,
+      "row_id": "1042944"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lincoln Square East",
+      "pickup_zone_id": 142,
+      "row_id": "1042961"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1043021"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Meatpacking/West Village West",
+      "pickup_zone_id": 158,
+      "row_id": "1043046"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1043060"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton West",
+      "pickup_zone_id": 50,
+      "row_id": "1043063"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1043081"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Sutton Place/Turtle Bay North",
+      "pickup_zone_id": 229,
+      "row_id": "1043121"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-13",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1043156"
+    },
+    {
+      "pickup_borough": "Manhattan",
       "pickup_date": "2024-01-01",
       "pickup_hour": 0,
       "pickup_zone": "Midtown Center",
       "pickup_zone_id": 161,
       "row_id": "1089"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1135599"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1139198"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1139206"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1139246"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1139304"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1139332"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1139341"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1139371"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1139373"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1139399"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village North",
+      "pickup_zone_id": 113,
+      "row_id": "1139449"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Seaport",
+      "pickup_zone_id": 209,
+      "row_id": "1139520"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Flatiron",
+      "pickup_zone_id": 90,
+      "row_id": "1139610"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "SoHo",
+      "pickup_zone_id": 211,
+      "row_id": "1139618"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "UN/Turtle Bay South",
+      "pickup_zone_id": 233,
+      "row_id": "1139703"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side North",
+      "pickup_zone_id": 236,
+      "row_id": "1139812"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1139909"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1139916"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1139946"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1139954"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown North",
+      "pickup_zone_id": 163,
+      "row_id": "1139999"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1140070"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lenox Hill West",
+      "pickup_zone_id": 141,
+      "row_id": "1140158"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Harlem South",
+      "pickup_zone_id": 75,
+      "row_id": "1140286"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1140291"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lenox Hill East",
+      "pickup_zone_id": 140,
+      "row_id": "1140299"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1140409"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1140446"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1140613"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side North",
+      "pickup_zone_id": 236,
+      "row_id": "1140639"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1140733"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1140793"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1140887"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1140963"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Sutton Place/Turtle Bay North",
+      "pickup_zone_id": 229,
+      "row_id": "1140991"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lincoln Square East",
+      "pickup_zone_id": 142,
+      "row_id": "1141020"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper West Side North",
+      "pickup_zone_id": 238,
+      "row_id": "1141208"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1141237"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1141401"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1141449"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lenox Hill West",
+      "pickup_zone_id": 141,
+      "row_id": "1141453"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1141514"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1141654"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "SoHo",
+      "pickup_zone_id": 211,
+      "row_id": "1141675"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1141697"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1141807"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Gramercy",
+      "pickup_zone_id": 107,
+      "row_id": "1141840"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Gramercy",
+      "pickup_zone_id": 107,
+      "row_id": "1141879"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "SoHo",
+      "pickup_zone_id": 211,
+      "row_id": "1141909"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1141974"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper West Side South",
+      "pickup_zone_id": 239,
+      "row_id": "1141980"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1142025"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Union Sq",
+      "pickup_zone_id": 234,
+      "row_id": "1142040"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village North",
+      "pickup_zone_id": 113,
+      "row_id": "1142084"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village North",
+      "pickup_zone_id": 113,
+      "row_id": "1142126"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1142325"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Chinatown",
+      "pickup_zone_id": 45,
+      "row_id": "1142326"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1142425"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1142534"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1142577"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1142719"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1142891"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lenox Hill West",
+      "pickup_zone_id": 141,
+      "row_id": "1142917"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Hamilton Heights",
+      "pickup_zone_id": 116,
+      "row_id": "1142925"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Little Italy/NoLiTa",
+      "pickup_zone_id": 144,
+      "row_id": "1142966"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1143073"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper West Side South",
+      "pickup_zone_id": 239,
+      "row_id": "1143148"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Manhattan Valley",
+      "pickup_zone_id": 151,
+      "row_id": "1143336"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Lower East Side",
+      "pickup_zone_id": 148,
+      "row_id": "1143349"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1143350"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "TriBeCa/Civic Center",
+      "pickup_zone_id": 231,
+      "row_id": "1143554"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown Center",
+      "pickup_zone_id": 161,
+      "row_id": "1143618"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-14",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1144328"
     },
     {
       "pickup_borough": "Manhattan",
@@ -219,11 +1171,227 @@
     },
     {
       "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown North",
+      "pickup_zone_id": 163,
+      "row_id": "1228206"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1228426"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1228848"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1228996"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown Center",
+      "pickup_zone_id": 161,
+      "row_id": "1229089"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1229137"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1229173"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1229293"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1229333"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "1229524"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1229615"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1230023"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-15",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1230098"
+    },
+    {
+      "pickup_borough": "Manhattan",
       "pickup_date": "2024-01-01",
       "pickup_hour": 0,
       "pickup_zone": "Lenox Hill West",
       "pickup_zone_id": 141,
       "row_id": "1283"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1302419"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1302541"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Sutton Place/Turtle Bay North",
+      "pickup_zone_id": 229,
+      "row_id": "1302641"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village South",
+      "pickup_zone_id": 114,
+      "row_id": "1302682"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1302701"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side South",
+      "pickup_zone_id": 237,
+      "row_id": "1302732"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1302806"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side North",
+      "pickup_zone_id": 236,
+      "row_id": "1302854"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown North",
+      "pickup_zone_id": 163,
+      "row_id": "1302888"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1302973"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown Center",
+      "pickup_zone_id": 161,
+      "row_id": "1303287"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown South",
+      "pickup_zone_id": 164,
+      "row_id": "1303419"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "Penn Station/Madison Sq West",
+      "pickup_zone_id": 186,
+      "row_id": "1303468"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-16",
+      "pickup_hour": 0,
+      "pickup_zone": "East Chelsea",
+      "pickup_zone_id": 68,
+      "row_id": "1304061"
     },
     {
       "pickup_borough": "Manhattan",
@@ -237,1373 +1405,205 @@
       "pickup_borough": "Manhattan",
       "pickup_date": "2024-01-01",
       "pickup_hour": 0,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "1457"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown East",
-      "pickup_zone_id": 162,
-      "row_id": "1467"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Central Park",
-      "pickup_zone_id": 43,
-      "row_id": "1559"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Sutton Place/Turtle Bay North",
-      "pickup_zone_id": 229,
-      "row_id": "1700"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "1707"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Central Park",
-      "pickup_zone_id": 43,
-      "row_id": "1950"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
       "pickup_zone": "Upper West Side South",
       "pickup_zone_id": 239,
-      "row_id": "1970"
+      "row_id": "134"
     },
     {
       "pickup_borough": "Manhattan",
       "pickup_date": "2024-01-01",
       "pickup_hour": 0,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "1994"
+      "pickup_zone": "Murray Hill",
+      "pickup_zone_id": 170,
+      "row_id": "138"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "2045"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "2081"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "2113"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "2121"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Lenox Hill East",
-      "pickup_zone_id": 140,
-      "row_id": "2176"
-    },
-    {
-      "pickup_borough": "Queens",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "LaGuardia Airport",
-      "pickup_zone_id": 138,
-      "row_id": "2184"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "2213"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "2215"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "2223"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Clinton West",
-      "pickup_zone_id": 50,
-      "row_id": "2226"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "2262"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "2311"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "2327"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Lenox Hill West",
-      "pickup_zone_id": 141,
-      "row_id": "2400"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "2454"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "2491"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "2569"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "2593"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "2670"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "2699"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "2708"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "2751"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "2754"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Battery Park City",
-      "pickup_zone_id": 13,
-      "row_id": "2766"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "West Chelsea/Hudson Yards",
-      "pickup_zone_id": 246,
-      "row_id": "2822"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "2951"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Hamilton Heights",
-      "pickup_zone_id": 116,
-      "row_id": "3035"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Kips Bay",
-      "pickup_zone_id": 137,
-      "row_id": "3125"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village North",
-      "pickup_zone_id": 113,
-      "row_id": "3228"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Clinton West",
-      "pickup_zone_id": 50,
-      "row_id": "3242"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "3373"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Clinton East",
-      "pickup_zone_id": 48,
-      "row_id": "3492"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Little Italy/NoLiTa",
-      "pickup_zone_id": 144,
-      "row_id": "3509"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Clinton East",
-      "pickup_zone_id": 48,
-      "row_id": "3550"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "3810"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown South",
-      "pickup_zone_id": 164,
-      "row_id": "4029"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Clinton West",
-      "pickup_zone_id": 50,
-      "row_id": "4082"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "4131"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Lenox Hill East",
-      "pickup_zone_id": 140,
-      "row_id": "4222"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "4393"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown North",
-      "pickup_zone_id": 163,
-      "row_id": "4407"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "4463"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "4497"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Central Park",
-      "pickup_zone_id": 43,
-      "row_id": "4527"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "4612"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "4617"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Midtown Center",
-      "pickup_zone_id": 161,
-      "row_id": "4713"
-    },
-    {
-      "pickup_borough": "Queens",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Flushing Meadows-Corona Park",
-      "pickup_zone_id": 93,
-      "row_id": "4745"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "4843"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "4847"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Lower East Side",
-      "pickup_zone_id": 148,
-      "row_id": "4872"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "4897"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "5001"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "5011"
-    },
-    {
-      "pickup_borough": "Queens",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "JFK Airport",
-      "pickup_zone_id": 132,
-      "row_id": "5087"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-17",
       "pickup_hour": 0,
       "pickup_zone": "Garment District",
       "pickup_zone_id": 100,
-      "row_id": "5103"
+      "row_id": "1390078"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Hudson Sq",
-      "pickup_zone_id": 125,
-      "row_id": "5123"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side North",
-      "pickup_zone_id": 236,
-      "row_id": "5242"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper West Side North",
-      "pickup_zone_id": 238,
-      "row_id": "5268"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "5329"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 0,
-      "pickup_zone": "UN/Turtle Bay South",
-      "pickup_zone_id": 233,
-      "row_id": "5385"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-17",
       "pickup_hour": 0,
       "pickup_zone": "West Village",
       "pickup_zone_id": 249,
-      "row_id": "5397"
+      "row_id": "1390096"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-17",
       "pickup_hour": 0,
-      "pickup_zone": "West Chelsea/Hudson Yards",
-      "pickup_zone_id": 246,
-      "row_id": "5430"
+      "pickup_zone": "West Village",
+      "pickup_zone_id": 249,
+      "row_id": "1390350"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Greenwich Village North",
+      "pickup_zone_id": 113,
+      "row_id": "1390484"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1390649"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
       "pickup_hour": 0,
       "pickup_zone": "East Chelsea",
       "pickup_zone_id": 68,
-      "row_id": "5484"
+      "row_id": "1390650"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-17",
       "pickup_hour": 0,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "5515"
+      "pickup_zone": "Gramercy",
+      "pickup_zone_id": 107,
+      "row_id": "1390657"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Yorkville West",
+      "pickup_zone_id": 263,
+      "row_id": "1390671"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1390805"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Times Sq/Theatre District",
+      "pickup_zone_id": 230,
+      "row_id": "1390845"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1390937"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "Upper East Side South",
+      "pickup_zone_id": 237,
+      "row_id": "1391069"
+    },
+    {
+      "pickup_borough": "Manhattan",
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
       "pickup_zone": "Lenox Hill West",
       "pickup_zone_id": 141,
-      "row_id": "5584"
+      "row_id": "1391070"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "5611"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
       "pickup_zone": "Murray Hill",
       "pickup_zone_id": 170,
-      "row_id": "5729"
+      "row_id": "1391072"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "5797"
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
+      "pickup_zone": "East Village",
+      "pickup_zone_id": 79,
+      "row_id": "1391407"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "5959"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "TriBeCa/Civic Center",
-      "pickup_zone_id": 231,
-      "row_id": "6067"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "6095"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "6121"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-17",
+      "pickup_hour": 0,
       "pickup_zone": "Clinton East",
       "pickup_zone_id": 48,
-      "row_id": "6195"
+      "row_id": "1391436"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "6218"
-    },
-    {
-      "pickup_borough": "Queens",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "JFK Airport",
-      "pickup_zone_id": 132,
-      "row_id": "6401"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "6449"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "6451"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Midtown South",
-      "pickup_zone_id": 164,
-      "row_id": "6514"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Flatiron",
-      "pickup_zone_id": 90,
-      "row_id": "6550"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "6551"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "6627"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "6749"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper West Side North",
-      "pickup_zone_id": 238,
-      "row_id": "6762"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "6784"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Lincoln Square West",
-      "pickup_zone_id": 143,
-      "row_id": "6918"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Meatpacking/West Village West",
-      "pickup_zone_id": 158,
-      "row_id": "6991"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Penn Station/Madison Sq West",
-      "pickup_zone_id": 186,
-      "row_id": "7024"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "7052"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Murray Hill",
-      "pickup_zone_id": 170,
-      "row_id": "7227"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "7233"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "7241"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Meatpacking/West Village West",
-      "pickup_zone_id": 158,
-      "row_id": "7374"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Yorkville West",
-      "pickup_zone_id": 263,
-      "row_id": "7531"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Lincoln Square East",
-      "pickup_zone_id": 142,
-      "row_id": "7609"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Little Italy/NoLiTa",
-      "pickup_zone_id": 144,
-      "row_id": "7716"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "7758"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "7762"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "7779"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "7845"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Sutton Place/Turtle Bay North",
-      "pickup_zone_id": 229,
-      "row_id": "7943"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Financial District North",
-      "pickup_zone_id": 87,
-      "row_id": "8006"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Central Harlem",
-      "pickup_zone_id": 41,
-      "row_id": "8017"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Kips Bay",
-      "pickup_zone_id": 137,
-      "row_id": "8099"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Meatpacking/West Village West",
-      "pickup_zone_id": 158,
-      "row_id": "8117"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
+      "pickup_date": "2024-01-03",
       "pickup_hour": 0,
-      "pickup_zone": "West Chelsea/Hudson Yards",
-      "pickup_zone_id": 246,
-      "row_id": "8134"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Chelsea",
-      "pickup_zone_id": 68,
-      "row_id": "8173"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "8206"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "TriBeCa/Civic Center",
-      "pickup_zone_id": 231,
-      "row_id": "8228"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Lenox Hill East",
-      "pickup_zone_id": 140,
-      "row_id": "8229"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "UN/Turtle Bay South",
-      "pickup_zone_id": 233,
-      "row_id": "8279"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "8473"
-    },
-    {
-      "pickup_borough": "Queens",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Long Island City/Queens Plaza",
-      "pickup_zone_id": 146,
-      "row_id": "8504"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Kips Bay",
-      "pickup_zone_id": 137,
-      "row_id": "8547"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Kips Bay",
-      "pickup_zone_id": 137,
-      "row_id": "8582"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Murray Hill",
-      "pickup_zone_id": 170,
-      "row_id": "8586"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "SoHo",
-      "pickup_zone_id": 211,
-      "row_id": "8587"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Two Bridges/Seward Park",
-      "pickup_zone_id": 232,
-      "row_id": "8590"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Sutton Place/Turtle Bay North",
-      "pickup_zone_id": 229,
-      "row_id": "8721"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Little Italy/NoLiTa",
-      "pickup_zone_id": 144,
-      "row_id": "8816"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Sutton Place/Turtle Bay North",
-      "pickup_zone_id": 229,
-      "row_id": "8878"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Lower East Side",
-      "pickup_zone_id": 148,
-      "row_id": "9085"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "SoHo",
-      "pickup_zone_id": 211,
-      "row_id": "9334"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Midtown South",
-      "pickup_zone_id": 164,
-      "row_id": "9427"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Manhattan Valley",
-      "pickup_zone_id": 151,
-      "row_id": "9491"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Chelsea/Hudson Yards",
-      "pickup_zone_id": 246,
-      "row_id": "9513"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
       "pickup_zone": "Flatiron",
       "pickup_zone_id": 90,
-      "row_id": "9552"
+      "row_id": "143893"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Lincoln Square East",
-      "pickup_zone_id": 142,
-      "row_id": "9684"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Midtown East",
-      "pickup_zone_id": 162,
-      "row_id": "9690"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper East Side North",
-      "pickup_zone_id": 236,
-      "row_id": "9700"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper West Side South",
-      "pickup_zone_id": 239,
-      "row_id": "9742"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "TriBeCa/Civic Center",
-      "pickup_zone_id": 231,
-      "row_id": "9760"
-    },
-    {
-      "pickup_borough": "Unknown",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "N/A",
-      "pickup_zone_id": 264,
-      "row_id": "9811"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Kips Bay",
-      "pickup_zone_id": 137,
-      "row_id": "9975"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Financial District North",
-      "pickup_zone_id": 87,
-      "row_id": "10013"
-    },
-    {
-      "pickup_borough": "Brooklyn",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Boerum Hill",
-      "pickup_zone_id": 25,
-      "row_id": "10094"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "10185"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "SoHo",
-      "pickup_zone_id": 211,
-      "row_id": "10262"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Harlem North",
-      "pickup_zone_id": 74,
-      "row_id": "10330"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper East Side South",
-      "pickup_zone_id": 237,
-      "row_id": "10361"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "10439"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
       "pickup_zone": "Yorkville West",
       "pickup_zone_id": 263,
-      "row_id": "10457"
+      "row_id": "143951"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "10459"
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
+      "pickup_zone": "Clinton East",
+      "pickup_zone_id": 48,
+      "row_id": "144057"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "TriBeCa/Civic Center",
-      "pickup_zone_id": 231,
-      "row_id": "10522"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Upper West Side North",
-      "pickup_zone_id": 238,
-      "row_id": "10543"
-    },
-    {
-      "pickup_borough": "Brooklyn",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Williamsburg (North Side)",
-      "pickup_zone_id": 255,
-      "row_id": "10546"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "East Village",
-      "pickup_zone_id": 79,
-      "row_id": "10636"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Flatiron",
-      "pickup_zone_id": 90,
-      "row_id": "10662"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
       "pickup_zone": "Midtown Center",
       "pickup_zone_id": 161,
-      "row_id": "10797"
+      "row_id": "144094"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Village",
-      "pickup_zone_id": 249,
-      "row_id": "10840"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
       "pickup_zone": "Midtown South",
       "pickup_zone_id": 164,
-      "row_id": "10854"
+      "row_id": "144361"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "West Chelsea/Hudson Yards",
-      "pickup_zone_id": 246,
-      "row_id": "10960"
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
+      "pickup_zone": "Midtown Center",
+      "pickup_zone_id": 161,
+      "row_id": "144434"
     },
     {
       "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Greenwich Village South",
-      "pickup_zone_id": 114,
-      "row_id": "10969"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Alphabet City",
-      "pickup_zone_id": 4,
-      "row_id": "11205"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 1,
-      "pickup_zone": "Midtown North",
-      "pickup_zone_id": 163,
-      "row_id": "11265"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
+      "pickup_date": "2024-01-03",
+      "pickup_hour": 0,
       "pickup_zone": "TriBeCa/Civic Center",
       "pickup_zone_id": 231,
-      "row_id": "11327"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Clinton East",
-      "pickup_zone_id": 48,
-      "row_id": "11348"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Lincoln Square West",
-      "pickup_zone_id": 143,
-      "row_id": "11501"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Central Harlem",
-      "pickup_zone_id": 41,
-      "row_id": "11610"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Union Sq",
-      "pickup_zone_id": 234,
-      "row_id": "11633"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Gramercy",
-      "pickup_zone_id": 107,
-      "row_id": "11683"
-    },
-    {
-      "pickup_borough": "Brooklyn",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "Park Slope",
-      "pickup_zone_id": 181,
-      "row_id": "11737"
-    },
-    {
-      "pickup_borough": "Manhattan",
-      "pickup_date": "2024-01-01",
-      "pickup_hour": 2,
-      "pickup_zone": "SoHo",
-      "pickup_zone_id": 211,
-      "row_id": "11860"
+      "row_id": "144487"
     }
   ],
   "dataset_hash": "f4477b1f803d6dde4b697877e35ec5a042fc875136b955d974e31690a7d050ff",
-  "dataset_path": "dataset.json",
+  "dataset_path": "../data/yellow_tripdata_sample.parquet",
   "figures": {
     "f0001": {
       "C": {
@@ -3379,7 +3379,7 @@
         "figure_id": "chart0001",
         "instruction": "Plot hourly trip counts for Manhattan in January 2024",
         "operation": "generation",
-        "timestamp": "2026-09-15T20:40:31.896619+00:00",
+        "timestamp": "2026-09-15T22:55:33.457538+00:00",
         "version_id": "f0001"
       },
       "R": {
@@ -50464,7 +50464,7 @@
         "figure_id": "chart0002",
         "instruction": "Rank pickup zones by trip count within the selected hours",
         "operation": "extension",
-        "timestamp": "2026-09-15T20:40:32.538467+00:00",
+        "timestamp": "2026-09-15T22:55:34.109858+00:00",
         "version_id": "f0002"
       },
       "R": {
@@ -64770,7 +64770,7 @@
         "figure_id": "chart0002",
         "instruction": "Brush changed to hours [7, 8, 9, 10]",
         "operation": "coordination",
-        "timestamp": "2026-09-15T20:40:33.111369+00:00",
+        "timestamp": "2026-09-15T22:55:34.680763+00:00",
         "version_id": "f0003"
       },
       "R": {
@@ -72580,7 +72580,7 @@
       },
       "links": [],
       "parents": [],
-      "timestamp": "2026-09-15T20:40:32.043393+00:00"
+      "timestamp": "2026-09-15T22:55:33.602396+00:00"
     },
     "a0002": {
       "figures": {
@@ -72717,7 +72717,7 @@
       "parents": [
         "a0001"
       ],
-      "timestamp": "2026-09-15T20:40:32.700518+00:00"
+      "timestamp": "2026-09-15T22:55:34.271180+00:00"
     },
     "a0003": {
       "figures": {
@@ -72855,7 +72855,7 @@
       "parents": [
         "a0002"
       ],
-      "timestamp": "2026-09-15T20:40:33.283733+00:00"
+      "timestamp": "2026-09-15T22:55:34.851213+00:00"
     }
   }
 }

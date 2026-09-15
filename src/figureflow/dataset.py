@@ -41,9 +41,8 @@ def records(cursor) -> list[dict]:
     return [dict(zip(columns, row)) for row in cursor.fetchall()]
 
 
-def load_rows(full_data: bool = False) -> tuple[list[dict], dict]:
+def _normalize_parquet(path: Path, *, full_data: bool) -> tuple[list[dict], str, Path]:
     directory = bundled_dir()
-    path = full_path() if full_data else directory / 'yellow_tripdata_sample.parquet'
     lookup = directory / 'taxi_zone_lookup.csv'
     if not path.is_file() or not lookup.is_file():
         raise ValueError('Bundled taxi sample or zone lookup is missing; reinstall the repository package')
@@ -60,6 +59,13 @@ ORDER BY t.{identity}"""
     with duckdb.connect(':memory:') as connection:
         connection.execute('SET threads=1')
         rows = records(connection.execute(sql, [str(path), str(lookup)]))
+    return rows, sql, lookup
+
+
+def load_rows(full_data: bool = False) -> tuple[list[dict], dict]:
+    directory = bundled_dir()
+    path = full_path() if full_data else directory / 'yellow_tripdata_sample.parquet'
+    rows, sql, lookup = _normalize_parquet(path, full_data=full_data)
     metadata = {'kind': 'TLC yellow taxi January 2024', 'mode': 'full' if full_data else 'sample',
                 'sample_rows': len(rows), 'parquet_sha256': file_hash(path),
                 'zone_lookup_sha256': file_hash(lookup), 'preparation_sql': sql,
@@ -68,6 +74,21 @@ ORDER BY t.{identity}"""
     if not full_data and manifest.exists():
         metadata['sample_manifest'] = json.loads(manifest.read_text())
     return rows, metadata
+
+
+def load_snapshot(path: Path) -> list[dict]:
+    """Load a full analytical snapshot from Parquet (sample) or JSON rows."""
+    path = Path(path)
+    if path.suffix.lower() == '.parquet':
+        # Bundled sample rows carry source_row_number; other TLC exports use file_row_number.
+        rows, _, _ = _normalize_parquet(
+            path, full_data=path.name != 'yellow_tripdata_sample.parquet'
+        )
+        return rows
+    try:
+        return json.loads(path.read_text())
+    except OSError as error:
+        raise ValueError('Missing or unreadable dataset sidecar') from error
 
 
 def connection_for(rows: list[dict]):

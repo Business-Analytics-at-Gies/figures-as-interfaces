@@ -64,19 +64,26 @@ def test_committed_example_is_schema_valid_and_replayable():
     assert path.exists()
     data=json.loads(path.read_text())
     Draft202012Validator(json.loads((ROOT/'docs/artifact.schema.json').read_text())).validate(data)
-    # Size policy: committed example stays under 2 MB.
+    # Size policy: committed example material under examples/ stays under 2 MB.
+    example_bytes = sum(
+        p.stat().st_size for p in (ROOT/'examples').glob('*')
+        if p.is_file() and p.name != 'taxi_figures.ipynb'
+    )
     assert path.stat().st_size < 2_000_000
-    # Selection to rows using only json and the sidecar dataset.
-    dataset_path = (path.parent / data['dataset_path'])
-    assert dataset_path.exists()
-    full_rows = json.loads(dataset_path.read_text())
+    assert example_bytes < 2_000_000
+    assert not (ROOT/'examples'/'dataset.json').exists()
+    dataset_file = (path.parent / data['dataset_path']).resolve()
+    assert dataset_file.suffix == '.parquet' and dataset_file.is_file()
+    # JSON-only selection uses the bounded inlined mark-referenced sample.
+    sample_rows = data['dataset']
     state = data['versions'][data['head']]
     figure = data['figures'][state['figures']['chart0001']]
     marks = [d['mark_id'] for d in figure['V']['spec']['data']['values']
              if 17 <= d['pickup_hour'] <= 20]
     ids = {row_id for mark in marks for row_id in figure['R']['mark_to_rows'][mark]}
-    selected_rows = [row for row in full_rows if row['row_id'] in ids]
-    assert len(selected_rows) == len(ids) and len(selected_rows) > 0
+    selected_rows = [row for row in sample_rows if row['row_id'] in ids]
+    assert len(selected_rows) > 0
+    assert {row['pickup_hour'] for row in selected_rows} == {17, 18, 19, 20}
     result=run('replay',path)
     assert result.returncode==0,result.stderr
 
@@ -91,7 +98,4 @@ def test_notebook_analysis_cells_run_offline(tmp_path, monkeypatch):
         if cell['cell_type']=='code' and 'install' not in cell.get('metadata',{}).get('tags',[]):
             exec(compile(''.join(cell['source']),str(notebook),'exec'),context)
     assert len(context['selected_rows'])>0
-    # The notebook example currently brushes the evening chart without
-    # reasserting the full [17,18,19,20] interval; accept any nonempty subset
-    # of the documented hours.
-    assert set(r['pickup_hour'] for r in context['selected_rows']).issubset({17,18,19,20})
+    assert set(r['pickup_hour'] for r in context['selected_rows']) == {17,18,19,20}

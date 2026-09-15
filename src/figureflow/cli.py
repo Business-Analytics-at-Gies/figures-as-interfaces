@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import base64
 import json
+import os
 from pathlib import Path
 import sys
 
@@ -21,11 +22,15 @@ def mark_ids(figure, hours):
 
 def demo(output: Path):
     # The teaching demo is explicitly offline, even if a provider hook is configured.
+    from .dataset import bundled_dir
+
     pipeline = Pipeline(planner=RuleBasedPlanner())
     hourly = pipeline.execute(pipeline.planner.plan(TREND), TREND)
     evening = pipeline.follow_up(hourly.M['figure_id'],mark_ids(hourly,[17,18,19,20]),RANK)
     morning = pipeline.brush(hourly.M['figure_id'],mark_ids(hourly,[7,8,9,10]))[0]
     output.mkdir(parents=True,exist_ok=True)
+    parquet = bundled_dir() / 'yellow_tripdata_sample.parquet'
+    pipeline.artifact.dataset_path = str(Path(os.path.relpath(parquet, output)))
     pipeline.artifact.save(output/'artifact.json')
     lines = [f"TLC January 2024: {len(pipeline.artifact.dataset):,} sampled trips, not full-month totals.",
              f"Manhattan: {len(hourly.D['rows']):,} trips across {len(hourly.D['results'])} hourly marks.",
