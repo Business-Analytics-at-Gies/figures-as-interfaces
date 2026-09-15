@@ -109,7 +109,7 @@ The paper's "Planner, Executor, and Evaluator" and "plan–action–observation 
 - [ ] Write failing CLI tests before CLI implementation.
 - [ ] Implement `figureflow demo --output demo-output`: Manhattan hourly trip counts across January, brush hours 17-20 inclusive, rank pickup zones within Manhattan, brush hours 7-10 inclusive, automatically update the same linked chart.
 - [ ] Export JSON ledger, specs, PNGs, code and a readable transcript. Run `figureflow replay demo-output/artifact.json` in a fresh process.
-- [ ] Run full tests, inspect all exported PNGs, check package installation, ensure clean git state after explicit-path commit `feat: demonstrate linked seasonal exploration`.
+- [ ] Run full tests, inspect all exported PNGs, check package installation, ensure clean git state after explicit-path commit `feat: demonstrate linked taxi exploration`.
 
 ## 7. Out of scope and next slice
 
