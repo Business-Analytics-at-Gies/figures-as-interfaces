@@ -1,0 +1,29 @@
+# Figures as Interfaces
+
+An open implementation of the ideas in
+
+> **Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery**
+> Yifang Wang, Rui Sheng, Erzhuo Shao, Yifan Qian, Haotian Li, Nan Cao, Dashun Wang
+> arXiv:2604.08491 (2026). **Paper: https://arxiv.org/abs/2604.08491**. Demo by the authors: https://www.llm-native-figure.com
+
+This repository is not affiliated with the paper's authors. It is a teaching and research build from the Gies College of Business, University of Illinois, started for students in BADM 554 (Enterprise Database Management) and BDI 513 (Data Storytelling).
+
+## The idea in one paragraph
+
+A figure should not be a dead picture. Each figure here is a tuple of the rendered visualization (a Vega-Lite spec with an id on every mark), the code that produced it (SQL run on DuckDB), the data subset behind it, and metadata about when and why it was made. Because every mark maps back to rows, a person or an AI assistant can select part of a chart, get the rows behind the selection, and ask a follow-up question that becomes the next chart. Figures are stored in artifacts, a version-controlled ledger of the exploration, so any figure can be re-executed and reproduced.
+
+## Data
+
+The demo uses one month of NYC TLC yellow taxi trips and the taxi zone lookup, the same data the courses use, queried locally with DuckDB. A deterministic sample is committed so the tests and demo run offline; the full month is read from a local parquet file if present.
+
+## Formats
+
+Figures and artifacts are plain JSON: the Vega-Lite spec, the SQL, the rows, and metadata. They load in a Python notebook (Colab), in a Wolfram notebook, or anywhere else that can parse JSON and render Vega-Lite. The Python package here is the reference implementation, not a requirement for reading artifacts. See `docs/` for the schema and an example.
+
+## Status
+
+Early. Read `docs/plan.md` for the architecture and the minimal slice. Issues labelled `good first issue` are the entry points for contributors. See `CONTRIBUTING.md`.
+
+## License
+
+MIT. The paper itself is the authors' work; read it at the arXiv link above.

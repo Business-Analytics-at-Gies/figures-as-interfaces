@@ -2,7 +2,7 @@
 
 type: code
 
-Implementation of "Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery" (Wang, Sheng, Shao, Qian, Li, Cao, Wang; arXiv:2604.08491v2, Apr 2026). Paper PDF and text in `sources/`. Demo site named in the paper: www.llm-native-figure.com.
+Implementation of "Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery" (Wang, Sheng, Shao, Qian, Li, Cao, Wang; arXiv:2604.08491v2, Apr 2026). Paper: https://arxiv.org/abs/2604.08491. PDF and text extract in `sources/` (gitignored; not redistributable). Demo site named in the paper: www.llm-native-figure.com.
 
 Core idea to implement: an LLM-native figure is a data-driven artifact that is human-legible and machine-addressable. Each figure embeds its full provenance (data subset, analytical operations and code, visualization spec) so an agent can trace a selection back to source rows, generate code to extend the analysis, and produce new figures from natural-language instructions or direct manipulation, via a bidirectional mapping between figure marks and underlying data.
 
@@ -14,7 +14,7 @@ Built on Codex (gpt-6-astra, reasoning effort low) in this workspace to conserve
 
 - Scratch files inside this repo. Pin dependency versions. Venv via `uv` or `python3 -m venv .venv`.
 - Convert any new PDF to text in `sources/` before reading it.
-- Nothing publishes anywhere without Vishal's approval.
+- Public repo: https://github.com/Business-Analytics-at-Gies/figures-as-interfaces (MIT). PRs only on main. Student contributors get triage, never write. Nothing learner-facing (announcements) goes out without Vishal's approval.
 
 ## Current Focus
 

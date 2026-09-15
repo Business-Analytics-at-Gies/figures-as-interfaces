@@ -1,0 +1,15 @@
+.venv/
+.cache/
+.scratch/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+demo-output/
+dist/
+
+data/*.parquet
+!data/yellow_tripdata_sample.parquet
+
+# paper sources stay local (arXiv license does not cover redistribution)
+sources/
