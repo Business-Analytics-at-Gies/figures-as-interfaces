@@ -8,8 +8,9 @@ Audience: BADM 554 and BDI 513 students using Wolfram notebooks or Python/Colab.
 | --- | --- |
 | `format_version` | Integer `1`. Consumers must reject unsupported versions. |
 | `artifact_id` | String identifying this exploration. |
-| `dataset` | Complete normalized input as JSON row objects. |
-| `dataset_hash` | SHA-256 of Python's sorted-key JSON serialization of those rows, used for reference replay integrity. Other consumers can use the rows directly; this hash is not a signature. |
+| `dataset` | Bounded sample (at most 200 rows) of the normalized input as JSON row objects, suitable for quick inspection. |
+| `dataset_hash` | SHA-256 of Python's sorted-key JSON serialization of the full input rows stored in the sidecar file, used for reference replay integrity. Other consumers can use the rows directly; this hash is not a signature. |
+| `dataset_path` | Relative path to the JSON sidecar file containing the full normalized input rows. |
 | `source` | Data origin, file hashes, DuckDB preparation SQL and parameters, sample manifest and input schema. |
 | `figures` | Dictionary keyed by immutable figure-version ids such as `f0001`. |
 | `versions` | Dictionary keyed by artifact-version ids such as `a0001`. Each node has `parents`, `figures`, `links`, `input`, and a UTC `timestamp`. |
@@ -22,9 +23,9 @@ Audience: BADM 554 and BDI 513 students using Wolfram notebooks or Python/Colab.
 Each figure holds the paper's `V`, `C`, `D`, `M` components and explicit `R` mapping:
 
 - `V.spec`: complete Vega-Lite v5 specification, including inline `data.values`. Each aggregate datum has `mark_id`. Render this object directly. Monthly equivalents here are hour-of-day points with a connecting line. Only points and bars are selectable data marks.
-- `V.png`: base64-encoded PNG rendered from the spec. Decode as bytes, not a pickle or Python object. `V.summary` is a plain-text account of scope and counts.
+- `V.png_path`: relative path to a PNG sidecar rendered from the spec. Decode the file bytes as an image, not a pickle or Python object. `V.summary` is a plain-text account of scope and counts. Implementations may optionally include an inline base64 `V.png` when an explicit embedding flag is enabled, but artifacts in this repository use sidecar PNGs by default.
 - `C.actions`: ordered JSON objects describing the analytical operations. `C.sql`: executable DuckDB SQL, with a temporary `selected` table and final aggregation query. `C.environment`: reference execution versions. `C.visualization_python`: reference-only rendering recipe; foreign-language consumers do not need to execute it.
-- `D.rows`: selected original trips, represented by the normalized projection below. `D.schema`: column names to SQL types. `D.results` and `D.result_schema`: grouped values used to draw the figure.
+- `D.rows`: a bounded sample (at most 200 rows) of the selected original trips for inspection, represented by the normalized projection below. `D.schema`: column names to SQL types. `D.results` and `D.result_schema`: grouped values used to draw the figure. The full row set for any figure can be recovered by executing `C.sql` against the sidecar dataset.
 - `M`: `figure_id`, `version_id`, `timestamp`, `operation`, `instruction`, `artifact_id`, `artifact_version`. An operation is `generation`, `extension`, or `coordination`. The artifact-version link points to the state that introduced this figure version.
 - `R.mark_to_rows`: dictionary mapping each `mark_id` to every contributing string `row_id`. Aggregated marks can map to thousands of trips. Mark ids are scoped to a figure version, so ids from a stale chart are rejected.
 
@@ -48,7 +49,7 @@ Language-independent algorithm:
 1. Parse the JSON and choose `figures[versions[head].figures[logical_chart_id]]`.
 2. Render its `V.spec`. Resolve a brush to the selected inline data's `mark_id` values.
 3. Look up each id in `R.mark_to_rows`; reject missing ids and an empty selection.
-4. Union the returned row ids. Index `D.rows` by `row_id` and retrieve those rows.
+4. Union the returned row ids. Load the full dataset from `dataset_path`, index it by `row_id`, and retrieve the corresponding rows. `D.rows` is a small, inlined sample, not the complete selection.
 5. To update linked zone charts, find the state's `links` with this logical chart as `source`. Derive distinct pickup hours and boroughs from selected rows; replace those filters in each `action_template` and execute the new action sequence. Preserve January scope and the original borough. Create a new artifact version, retaining prior states.
 
 Python example using only the standard library, equally expressible with Wolfram associations:
@@ -62,14 +63,16 @@ figure = artifact['figures'][state['figures']['chart0001']]
 marks = [d['mark_id'] for d in figure['V']['spec']['data']['values']
          if 17 <= d['pickup_hour'] <= 20]
 ids = {row_id for mark in marks for row_id in figure['R']['mark_to_rows'][mark]}
-rows = [row for row in figure['D']['rows'] if row['row_id'] in ids]
+with open(artifact['dataset_path']) as stream:
+    full_rows = json.load(stream)
+rows = [row for row in full_rows if row['row_id'] in ids]
 ```
 
 The renderer must return selected datum ids, not screenshot coordinates. An interval 17 through 20 selects four hourly marks, across all January dates. This implementation does not ship a browser brush adapter or a Wolfram loader.
 
 ## SQL replay and coordination
 
-Load `dataset` into a DuckDB table named `trips` using `source.schema` (or `D.schema` for supplied fixtures). In a fresh connection, execute the chosen figure's `C.sql`. The last statement returns `D.results`; `SELECT * FROM selected ORDER BY row_id` returns `D.rows`. To recover lineage independently, group the `selected` table by `pickup_hour` or `pickup_zone_id` and collect `row_id` in sorted order. No Python package is necessary for these operations.
+Load the full dataset from `dataset_path` into a DuckDB table named `trips` using `source.schema` (or `D.schema` for supplied fixtures). In a fresh connection, execute the chosen figure's `C.sql`. The last statement returns `D.results`; `SELECT * FROM selected ORDER BY row_id` returns the complete figure rows. To recover lineage independently, group the `selected` table by `pickup_hour` or `pickup_zone_id` and collect `row_id` in sorted order. No Python package is necessary for these operations.
 
 A coordination link contains `source`, `target` (logical chart ids), `dimensions` (`pickup_hour`, `pickup_borough`) and `action_template`. The template is a language-neutral list, not executable Python. Each version records the input instruction or brush ids and source figure version. Coordination reuses this template without another planner call. Only direct links are supported in this slice.
 

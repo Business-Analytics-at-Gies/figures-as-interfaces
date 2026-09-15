@@ -7,6 +7,7 @@
     "artifact_id",
     "dataset",
     "dataset_hash",
+    "dataset_path",
     "source",
     "figures",
     "versions",
@@ -23,11 +24,15 @@
       "type": "array",
       "items": {
         "type": "object"
-      }
+      },
+      "maxItems": 200
     },
     "dataset_hash": {
       "type": "string",
       "pattern": "^[0-9a-f]{64}$"
+    },
+    "dataset_path": {
+      "type": "string"
     },
     "source": {
       "type": "object"
@@ -67,7 +72,7 @@
           "type": "object",
           "required": [
             "spec",
-            "png",
+            "png_path",
             "summary"
           ],
           "properties": {
@@ -103,6 +108,9 @@
                   "additionalProperties": false
                 }
               }
+            },
+            "png_path": {
+              "type": "string"
             },
             "png": {
               "type": "string",

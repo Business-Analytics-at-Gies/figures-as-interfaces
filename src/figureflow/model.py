@@ -66,6 +66,7 @@ class Artifact:
     head: str | None = None
     format_version: int = 1
     dataset_hash: str = ""
+    dataset_path: str = "dataset.json"
 
     def __post_init__(self):
         self.dataset = copy.deepcopy(self.dataset)
@@ -73,7 +74,29 @@ class Artifact:
             self.dataset_hash = digest(self.dataset)
 
     def to_dict(self) -> dict:
-        return asdict(self)
+        """Portable JSON representation with bounded inlined rows and PNG paths.
+
+        The full dataset and all per-figure source rows remain available in
+        memory (self.dataset and each Figure.D["rows"]). Only a bounded sample
+        is inlined into the JSON envelope to keep artifacts small.
+        """
+        data = asdict(self)
+
+        # Limit top-level dataset sample; full rows live in the sidecar pointed
+        # to by dataset_path and are loaded by Artifact.load for replay.
+        sample_limit = 200
+        if len(data["dataset"]) > sample_limit:
+            data["dataset"] = data["dataset"][:sample_limit]
+
+        # Limit per-figure source rows and drop inline PNG bytes; the PNG
+        # itself is written as a sidecar file and referenced via V["png_path"].
+        for figure in data["figures"].values():
+            rows = figure["D"]["rows"]
+            if len(rows) > sample_limit:
+                figure["D"]["rows"] = rows[:sample_limit]
+            figure["V"].pop("png", None)
+
+        return data
 
     def validate(self) -> None:
         if self.format_version != 1 or digest(self.dataset) != self.dataset_hash:
@@ -119,6 +142,13 @@ class Artifact:
         self.validate()
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
+        # Persist the full dataset to a sidecar JSON file referenced by
+        # dataset_path. This file carries the complete rows; the artifact JSON
+        # only holds a small sample for inspection.
+        sidecar = path.parent / self.dataset_path
+        temporary_data = sidecar.with_name(sidecar.name + ".tmp")
+        temporary_data.write_text(json.dumps(self.dataset, indent=2, sort_keys=True, allow_nan=False) + "\n")
+        temporary_data.replace(sidecar)
         temporary = path.with_name(path.name + ".tmp")
         temporary.write_text(json.dumps(self.to_dict(), indent=2, sort_keys=True, allow_nan=False) + "\n")
         temporary.replace(path)
@@ -126,9 +156,18 @@ class Artifact:
     @classmethod
     def load(cls, path: str | Path) -> Artifact:
         try:
-            value = json.loads(Path(path).read_text())
+            path = Path(path)
+            value = json.loads(path.read_text())
             if not value.get("dataset_hash"):
                 raise ValueError("Missing dataset checksum")
+            # Load the full dataset from the referenced sidecar; the inlined
+            # dataset sample, if present, is for inspection only.
+            sidecar_name = value.get("dataset_path", "dataset.json")
+            try:
+                full_dataset = json.loads((path.parent / sidecar_name).read_text())
+            except OSError as error:
+                raise ValueError("Missing or unreadable dataset sidecar") from error
+            value["dataset"] = full_dataset
             value["figures"] = {k: Figure.from_dict(v) for k, v in value["figures"].items()}
             artifact = cls(**value)
             artifact.validate()

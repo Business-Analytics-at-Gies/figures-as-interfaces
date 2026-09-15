@@ -121,5 +121,10 @@ def materialize(actions, source_rows, version_id, sql=None, visualization=None):
     png = vlc.vegalite_to_png(context['spec'], vl_version='5.20', allowed_base_urls=[])
     result_schema = {by: 'BIGINT', **({'pickup_zone':'VARCHAR'} if by == 'pickup_zone_id' else {}), 'trips':'BIGINT'}
     D = {'rows': rows, 'schema': dict(SCHEMA), 'results': results, 'result_schema': result_schema}
-    V = {'spec': context['spec'], 'png': base64.b64encode(png).decode('ascii'), 'summary': context['summary']}
+    V = {
+        'spec': context['spec'],
+        'png': base64.b64encode(png).decode('ascii'),
+        'png_path': f"{version_id}.png",
+        'summary': context['summary'],
+    }
     return V, D, Mapping(context['mark_to_rows'])

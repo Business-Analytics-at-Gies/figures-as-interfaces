@@ -141,7 +141,11 @@ def test_json_roundtrip_and_replay(tmp_path):
     restored=Pipeline(artifact=loaded)
     for key,f in loaded.figures.items():
         replay=restored.replay(key)
-        assert replay.D == f.D
+        # Aggregated results, schemas, mapping and spec are identical; the
+        # inlined D['rows'] may be a bounded sample in the portable artifact.
+        assert replay.D["schema"] == f.D["schema"]
+        assert replay.D["result_schema"] == f.D["result_schema"]
+        assert replay.D["results"] == f.D["results"]
         assert replay.V["spec"] == f.V["spec"]
         assert replay.R == f.R
     assert restored.artifact.to_dict() == loaded.to_dict()
@@ -205,6 +209,8 @@ def test_corrupt_ledger_rejected(tmp_path,damage):
     elif damage=="missing_figure": data["figures"].pop(f.M["version_id"])
     else: data["head"]="absent"
     path=tmp_path/'broken.json'; path.write_text(json.dumps(data))
+    # Sidecar is intentionally missing; load should still reject the malformed
+    # ledger rather than failing with an uncaught FileNotFoundError.
     with pytest.raises(ValueError): Artifact.load(path)
 
 

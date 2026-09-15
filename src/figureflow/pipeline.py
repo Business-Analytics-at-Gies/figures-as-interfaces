@@ -130,7 +130,17 @@ class Pipeline:
             raise ValueError('Unknown figure version')
         figure=self.artifact.figures[figure_version_id]
         V,D,R=materialize(figure.C['actions'],self.artifact.dataset,figure_version_id,
-                          sql=figure.C['sql'],visualization=figure.C['visualization_python'])
-        if D != figure.D or R != figure.R or V['spec'] != figure.V['spec'] or V['summary'] != figure.V['summary']:
-            raise ValueError('Replay differs from recorded data, mapping or visualization')
+                           sql=figure.C['sql'],visualization=figure.C['visualization_python'])
+        # Replay validates the analytical result, mapping and visualization.
+        # The inlined D['rows'] in the portable artifact may be a bounded
+        # sample, so we compare schemas and aggregates but not full row lists.
+        if (
+            D['schema'] != figure.D['schema'] or
+            D['result_schema'] != figure.D['result_schema'] or
+            D['results'] != figure.D['results'] or
+            R != figure.R or
+            V['spec'] != figure.V['spec'] or
+            V['summary'] != figure.V['summary']
+        ):
+            raise ValueError('Replay differs from recorded aggregates, mapping or visualization')
         return Figure(V,copy.deepcopy(figure.C),D,copy.deepcopy(figure.M),R)
