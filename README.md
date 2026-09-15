@@ -1,16 +1,35 @@
-# Figures as Interfaces / FigureFlow
+# Figures as Interfaces
 
-An open implementation of **Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery**, by Yifang Wang, Rui Sheng, Erzhuo Shao, Yifan Qian, Haotian Li, Nan Cao, and Dashun Wang. [Paper: arXiv:2604.08491](https://arxiv.org/abs/2604.08491). [Authors' demo](https://www.llm-native-figure.com).
+An open implementation of the ideas in
 
-This repository is not affiliated with the paper's authors. It is a teaching and research build from the Gies College of Business, University of Illinois, for BADM 554 (Enterprise Database Management) and BDI 513 (Data Storytelling).
+> **Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery**
+> Yifang Wang, Rui Sheng, Erzhuo Shao, Yifan Qian, Haotian Li, Nan Cao, Dashun Wang
+> arXiv:2604.08491 (2026). **Paper: https://arxiv.org/abs/2604.08491**. Demo by the authors: https://www.llm-native-figure.com
 
-A small, working implementation of *Figures as Interfaces*: figures preserve their data, SQL, Vega-Lite specification, source-row mappings and exploration history. DuckDB runs the analysis locally. A deterministic planner makes the demo work offline without an API key.
+This repository is not affiliated with the paper's authors. It is a teaching and research build from the Gies College of Business, University of Illinois, started for students in BADM 554 (Enterprise Database Management) and BDI 513 (Data Storytelling).
 
-The teaching example uses actual NYC yellow taxi trips for BADM 554 students also taking BDI 513 Data Storytelling. A committed 50,000-trip sample and zone lookup support both installation and offline use. It is not a full-month count. The complete original Parquet is not committed.
+## The idea in one paragraph
 
-## Install and run
+A figure should not be a dead picture. Each figure here is a tuple of the rendered visualization (a Vega-Lite spec with an id on every mark), the code that produced it (SQL run on DuckDB), the data subset behind it, and metadata about when and why it was made. Because every mark maps back to rows, a person or an AI assistant can select part of a chart, get the rows behind the selection, and ask a follow-up question that becomes the next chart. Figures are stored in artifacts, a version-controlled ledger of the exploration, so any figure can be re-executed and reproduced.
 
-From this repository, with Python 3.12 or newer and `uv` installed:
+## Data
+
+The demo uses one month of NYC TLC yellow taxi trips and the taxi zone lookup, the same data the courses use, queried locally with DuckDB. A deterministic sample is committed so the tests and demo run offline; the full month is read from a local parquet file if present.
+
+## Formats
+
+Figures and artifacts are plain JSON: the Vega-Lite spec, the SQL, the rows, and metadata. They load in a Python notebook (Colab), in a Wolfram notebook, or anywhere else that can parse JSON and render Vega-Lite. The Python package here is the reference implementation, not a requirement for reading artifacts. See `docs/` for the schema and an example.
+
+## Package layout and run
+
+Python 3.12 or newer (see `requires-python` in `pyproject.toml`; 3.10+ tooling is fine for editing). Runtime dependencies are pinned: `duckdb==1.3.2` and `vl-convert-python==1.8.0`. PNG rendering via `vl-convert` is optional for consumers that only need the Vega-Lite JSON; the demo exports PNGs by default.
+
+```
+src/figureflow/   package (actions, dataset, model, pipeline, planner, cli)
+data/             50,000-trip sample parquet + zone lookup (bundled in the wheel)
+docs/             plan, artifact format, JSON Schema, verification notes
+examples/         committed artifact, Colab notebook
+```
 
 ```sh
 mkdir -p .scratch .cache
@@ -20,65 +39,14 @@ UV_CACHE_DIR="$PWD/.cache/uv" TMPDIR="$PWD/.scratch" uv sync --extra test --lock
 .venv/bin/python -m pytest -q
 ```
 
-Alternatively, create `.venv` with `python3 -m venv .venv` and install with `.venv/bin/python -m pip install '.[test]'`. Direct dependencies are pinned in `pyproject.toml`; `uv.lock` also pins resolved dependencies. Installation may download packages. Tests and the demo make no network calls.
+**Size policy:** `examples/taxi-artifact.json` stays under 2 MB. Full re-execution reads `data/yellow_tripdata_sample.parquet` via `dataset_path`; the artifact inlines at most 200 mark-referenced rows for JSON-only selection. PNGs are referenced by `png_path`, not base64.
 
-## What the demo shows
+Colab: [`examples/taxi_figures.ipynb`](examples/taxi_figures.ipynb).
 
-1. Plot Manhattan pickup counts for all 24 hours of the day, aggregated across the January sample.
-2. Select evening hours 17 through 20 inclusive and ask to rank pickup zones within that window and borough.
-3. Select morning hours 7 through 10 inclusive. The same linked chart updates through its stored coordination rule, without another planner call.
-4. Save all three figure versions and replay their stored SQL against the embedded input snapshot.
+## Status
 
-The sample includes **44,816 Manhattan trips**. Evening selects **11,738** trips, led by **Midtown Center (868)**. Morning selects **7,157** trips, led by **Upper East Side North (538)**. Both rankings remain available in the saved history. These are sample observations, not population estimates.
+Early. Read `docs/plan.md` for the architecture and the minimal slice. Issues labelled `good first issue` are the entry points for contributors. See `CONTRIBUTING.md`.
 
-`demo-output/` contains a portable `artifact.json`, three PNG charts, three Vega-Lite specs, three SQL files and a transcript. The CLI simulates a brush by supplying the selected marks' ids; a live browser interaction is the next slice.
+## License
 
-## Notebooks and language-neutral artifacts
-
-- [Colab notebook](examples/taxi_figures.ipynb): installs the repository, runs the demo, renders saved specs, and resolves selections using plain JSON.
-- [Committed demo artifact](examples/taxi-artifact.json): the full demo history, including the 50,000-row analytical snapshot. It is intentionally self-contained and larger than the compressed Parquet sample.
-- [Format guide](docs/artifact-format.md) and [JSON Schema](docs/artifact.schema.json): describe figures, data types, mark mappings, SQL and the version graph.
-- [Plan](docs/plan.md): paper terminology, architecture, scope and consumer requirements.
-- [Verification record](docs/verification.md): red and green test counts and replay checks.
-
-To distribute this revision of the notebook and package to Colab students before publication, provide a repository ZIP. After committing your desired revision:
-
-```sh
-git archive --format=zip --prefix=figures-as-interfaces/ HEAD -o .scratch/figures-as-interfaces.zip
-```
-
-Open the notebook in Colab and run its setup cell, uploading that ZIP if the repository has not already been cloned. Wolfram users can parse the same JSON and render its Vega-Lite specification without importing Python. A Wolfram loader is outside this pass. DuckDB local is for fast iteration; the student-facing deployment engine remains a later decision.
-
-## Package layout
-
-`src/figureflow/` contains the records and ledger (`model.py`), DuckDB data preparation (`dataset.py`), action compiler and renderer (`actions.py`), planner interface (`planner.py`), execution/coordination/replay (`pipeline.py`), and CLI (`cli.py`). Tests live in `tests/`, committed inputs in `data/`, and notebook/example output in `examples/`.
-
-## Python API
-
-```python
-from figureflow import Pipeline, Mapping, RuleBasedPlanner
-
-pipeline = Pipeline(planner=RuleBasedPlanner())
-prompt = 'Plot hourly trip counts for Manhattan in January 2024'
-figure = pipeline.execute(pipeline.planner.plan(prompt), prompt)
-ids = [row['mark_id'] for row in figure.V['spec']['data']['values']
-       if 17 <= row['pickup_hour'] <= 20]
-selection = Mapping.select(figure, ids)
-ranking = pipeline.follow_up(figure.M['figure_id'], ids,
-                            'Rank pickup zones by trip count within the selected hours')
-pipeline.artifact.save('demo-output/my-artifact.json')
-```
-
-`Pipeline.execute(..., parent_version='a0001')` creates a branch from a prior state. Empty selections, stale ids, unsupported actions and unmatched filters fail without appending a partial history entry. Original row ids refer to the full Parquet's zero-based row offset, preserved in the sample as `source_row_number`.
-
-## Optional full data and planner
-
-To prepare the sample again, follow [data/README.md](data/README.md). `Pipeline(full_data=True)` reads the local file named by `FIGUREFLOW_TAXI_PARQUET` and reports a clear error if absent. The default never needs that variable or the course folder. Full-data artifacts can be large because this minimal implementation embeds rows.
-
-`FIGUREFLOW_PLANNER=your_module:factory` enables an optional provider hook for API use. The factory returns an object with `plan(instruction, selection=None) -> list[dict]`. It may call your chosen LLM and returns only constrained actions, which the pipeline validates. No provider SDK or key is required; the CLI teaching demo explicitly uses the offline stub. Provider adapters are installed/configured separately and own their authentication and network calls.
-
-The rule-based stub handles the documented hourly-count and zone-ranking prompts. It is not a general language model. The implementation covers filtering, grouping, counting, deterministic sorting, chart specification and direct coordination. It does not implement the full paper's multi-agent planning/evaluation, arbitrary modeling, science-of-science database, hybrid web UI, transitive links or collaborative editing. Rendering uses [Vega's vl-convert](https://github.com/vega/vl-convert), with inline data and external URL access disabled.
-
-## Contributing and license
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Issues labelled `good first issue` are entry points for contributors. Code is MIT licensed. The paper remains the authors' work; read it at the arXiv link above.
+CC BY-NC-SA 4.0. The paper itself is the authors' work; read it at the arXiv link above.
