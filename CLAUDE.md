@@ -15,7 +15,7 @@ Vishal asked the paper's authors for permission on LinkedIn on 2026-09-15; reply
 | Work | Lane | How |
 |---|---|---|
 | Design, plan, architecture decisions | Codex gpt-6-astra, reasoning low | `codex --model gpt-6-astra -c model_reasoning_effort=low` |
-| Mechanical implementation, test runs, review fixes, rebases | **Codex GPT-5.3-Codex-Spark** (separate weekly pool) | `codex --model gpt-5.3-codex-spark` (or `codex exec -m gpt-5.3-codex-spark` for one-shot) |
+| Mechanical implementation, test runs, review fixes, rebases | Cursor agent or opencode (Codex Spark was rejected on this account on 2026-09-15: 'not supported when using Codex with a ChatGPT account'; retry only after re-verifying) | `herdr agent start <name> --kind cursor --pane <id>` or `--kind opencode` |
 | Independent verification, second attempt, premise checks | opencode | `herdr agent start <name> --kind opencode --pane <id>`; scratch files inside this repo, never /tmp |
 | Notebook, UI, front-end work (Colab example, any web view) | Cursor agent | `herdr agent start <name> --kind cursor --pane <id>`; accept the trust dialog then re-send the prompt |
 | Merges, reviews of merges, anything learner-facing | Claude (control) | holds main; PRs only |
