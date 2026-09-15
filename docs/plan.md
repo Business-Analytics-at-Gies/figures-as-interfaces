@@ -11,7 +11,7 @@
 - Scratch, test temporary directories, caches, and demo outputs stay inside this repository.
 - Tests prohibit network connections. The default planner and Vega-Lite PNG rendering work offline.
 - No publication, external account access, or API key required. No em-dashes in authored docs.
-- Done: test-first evidence, correct counts and provenance, JSON round-trip, exact data replay, branching history, linked evening/morning updates, inspected PNGs, and three stage commits.
+- Done: test-first evidence, correct counts and provenance, JSON round-trip, exact data replay, branching history, linked evening/morning updates, inspected PNGs, and commits after each stage.
 
 ## 1. Figure representation and mark identity
 
@@ -24,7 +24,7 @@ Section 3.1 calls figures "structured analytical states" and defines `F_t = {V_t
 | `D_t` | Selected original rows, row schema, aggregate results and result schema. The artifact embeds the complete input dataset and checksum for replay and follow-up queries. |
 | `M_t` | UTC timestamp, stable logical figure id, unique figure-version id, operation type, user instruction/interaction, and artifact/version links. |
 
-Every source row has a unique `row_id`. Every aggregate mark has a globally version-scoped `mark_id` and maps to every contributing source row, not just one representative row. Line charts use identifiable hourly point marks over a connecting line; the line is a guide, not a separately selectable datum. Bars have one mark per pickup zone. The spec embeds the ids in its data and tooltip. Hourly point brushing is discrete membership, including noncontiguous hours; this pass does not infer continuous ranges from a pair of endpoints.
+Every source row has a unique `row_id`. Every aggregate mark has a artifact-local, version-scoped `mark_id` and maps to every contributing source row, not just one representative row. Line charts use identifiable hourly point marks over a connecting line; the line is a guide, not a separately selectable datum. Bars have one mark per pickup zone. The spec embeds the ids in its data and tooltip. Hourly point brushing is discrete membership, including noncontiguous hours; this pass does not infer continuous ranges from a pair of endpoints.
 
 ## 2. Bidirectional mapping R_t
 
@@ -98,18 +98,18 @@ The paper's "Planner, Executor, and Evaluator" and "plan–action–observation 
 
 ### Stage B: package
 
-- [ ] Create pinned project configuration and venv; write tests against the public API before implementation.
-- [ ] Run `.venv/bin/python -m pytest tests/test_pipeline.py -q`; capture expected failures in `docs/verification.md`.
-- [ ] Implement typed records, compiler, actual rendering, stub planner, JSON persistence and pipeline.
-- [ ] Verify hand-counted fixture results, full sample counts against an independent DuckDB query, row-id lineage, replay, branching and invalid inputs.
-- [ ] Run package tests and commit explicit Stage B paths with `feat: implement offline figure provenance pipeline`.
+- [x] Create pinned project configuration and venv; write tests against the public API before implementation.
+- [x] Run `.venv/bin/python -m pytest tests/test_pipeline.py -q`; capture expected failures in `docs/verification.md`.
+- [x] Implement typed records, compiler, actual rendering, stub planner, JSON persistence and pipeline.
+- [x] Verify hand-counted fixture results, full sample counts against an independent DuckDB query, row-id lineage, replay, branching and invalid inputs.
+- [x] Run package tests and commit explicit Stage B paths with `feat: implement offline figure provenance pipeline`.
 
 ### Stage C: demo
 
-- [ ] Write failing CLI tests before CLI implementation.
-- [ ] Implement `figureflow demo --output demo-output`: Manhattan hourly trip counts across January, brush hours 17-20 inclusive, rank pickup zones within Manhattan, brush hours 7-10 inclusive, automatically update the same linked chart.
-- [ ] Export JSON ledger, specs, PNGs, code and a readable transcript. Run `figureflow replay demo-output/artifact.json` in a fresh process.
-- [ ] Run full tests, inspect all exported PNGs, check package installation, ensure clean git state after explicit-path commit `feat: demonstrate linked taxi exploration`.
+- [x] Write failing CLI tests before CLI implementation.
+- [x] Implement `figureflow demo --output demo-output`: Manhattan hourly trip counts across January, brush hours 17-20 inclusive, rank pickup zones within Manhattan, brush hours 7-10 inclusive, automatically update the same linked chart.
+- [x] Export JSON ledger, specs, PNGs, code and a readable transcript. Run `figureflow replay demo-output/artifact.json` in a fresh process.
+- [x] Run full tests, inspect all exported PNGs, check package installation, preserve unrelated workspace changes after explicit-path commit `feat: demonstrate linked taxi exploration`.
 
 ## 7. Out of scope and next slice
 
@@ -124,3 +124,10 @@ Read the course's `learner-files/sql/M4I6-taxi-star.sql`. Raw columns are `tpep_
 Apply the course cleaning rules before sampling: January pickups, dropoff after pickup, duration at most 720 minutes, positive distance at most 100 miles, positive fare at most 500 dollars. Assign row ids from `file_row_number` before filtering. Select the first 50,000 valid trips ordered by MD5 of the original row number with row number as the tie-breaker. Sort the resulting file by original row number. This spreads the sample across the month deterministically; it is a sample, not the full month totals.
 
 The DuckDB analytical actions operate over the normalized, joined trip table. The artifact embeds that complete analytical input and its schema/checksum, plus source-file hashes and preparation SQL. Re-execution does not depend on the course folder or the full Parquet. The lookup and deterministic Parquet sample are packaged for installed use. Tests use a small hand-counted trip fixture for fine-grained checks and the actual committed sample for integration checks. The CLI reports sample scope clearly and exports the full zone ranking; its printed preview may show only leading zones.
+
+
+## Consumers
+
+The first users are BADM 554 students also taking BDI 513 Data Storytelling. The in-person cohort works in Wolfram notebooks; the online cohort works in Google Colab with Python. Persisted figures and artifacts are language-neutral JSON: Vega-Lite with per-mark ids, SQL, JSON rows and schema, explicit mark-to-row maps, coordination rules, and metadata. No pickles or Python object encoding is used. Any notebook can parse the artifact, render its spec, and resolve selections without importing this package.
+
+The Python package remains the reference implementation. `docs/artifact-format.md` and `docs/artifact.schema.json` document the figure and artifact contract. `examples/taxi-artifact.json` is a committed full demo artifact. `examples/taxi_figures.ipynb` installs from the repository, runs the demo and reads selections using plain JSON. A Wolfram loader is out of scope. The stored Python visualization recipe is provenance for reference replay, not a prerequisite for consuming the JSON.

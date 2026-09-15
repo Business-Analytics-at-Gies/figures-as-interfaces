@@ -10,3 +10,4 @@ def local_environment(monkeypatch):
     root = Path(__file__).resolve().parents[1]
     monkeypatch.setenv("TMPDIR", str(root / ".scratch"))
     monkeypatch.delenv("FIGUREFLOW_PLANNER", raising=False)
+    monkeypatch.setenv("PYTHONPATH", str(root / "tests/network_guard"))
