@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "figureflow"
+version = "0.1.0"
+description = "Offline, reproducible figures as analytical interfaces"
+requires-python = ">=3.12"
+dependencies = ["duckdb==1.3.2", "vl-convert-python==1.8.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5", "pytest-socket==0.7.0", "jsonschema==4.23.0", "ipython==9.0.2"]
+
+[project.scripts]
+figureflow = "figureflow.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "--disable-socket --basetemp=.scratch/pytest"
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/figureflow"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"data" = "figureflow/bundled_data"
