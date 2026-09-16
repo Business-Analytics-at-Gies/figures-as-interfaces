@@ -32,6 +32,15 @@ Tests required for logic, red first. Control verifies claims against the running
 
 First pass: read the paper, write `docs/plan.md` (architecture, minimal viable slice, what is out of scope), then implement the minimal slice with tests.
 
+
+## Lane lessons (2026-09-15)
+
+- opencode wedged for two hours on a long multi-step edit (process at 110 percent CPU, screen and context counter frozen, Escape ignored); its scaffold and read-only verification passes were fine. Give it bounded tasks and check for file writes; if nothing changes for 15 minutes, stop it and hand the remainder to Cursor.
+- Cursor on Auto finished the size policy, the merge from main, and the fresh-clone fix; its Opus default was out of usage.
+- Codex Spark returned HTTP 400 on this account (OpenAI-side, see ~/.claude/references/codex-cli.md); re-probe before relying on it.
+- Control verifies every agent brief from a clean worktree before merging: a fresh checkout found 11 errors that the agents' checkout hid.
+
 ## Session Log
 
+- 2026-09-15: PR #2 merged into main on 2026-09-16 08:24 CDT (minimal pipeline: DuckDB, taxi sample, artifact ledger with mark-to-row mapping, rule-based planner, Colab demo, 44 tests, independent verification report with a FAIL-on-scope verdict). Next slice for the astra lane: generalize the coordination graph and the action space per docs/verification-independent-2026-09-15.md.
 - 2026-09-15: repo created by control; paper staged and converted; Codex workspace opened.
